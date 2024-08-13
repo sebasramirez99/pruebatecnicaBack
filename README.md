@@ -17,13 +17,13 @@ Sigue estos pasos para configurar y ejecutar el backend en tu entorno local:
 1. **Clona este repositorio:**
 
    ```bash
-   git clone https://github.com/sebasramirez99/PruebaTecnicaBack.git
+   git clone https://github.com/sebasramirez99/pruebatecnicaBack.git
    ```
 
 2. **Navega al directorio del backend:**
 
    ```bash
-   cd PruebaTecnicaBack/fibonacci-backend
+   cd pruebatecnicaBack/fibonacci-backend
    ```
 
 3. **Instala las dependencias del proyecto:**

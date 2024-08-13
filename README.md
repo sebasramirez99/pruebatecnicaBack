@@ -1,7 +1,7 @@
 
 # Proyecto Prueba Técnica - Backend
 
-Este proyecto contiene el backend para la aplicación de la prueba técnica. Este backend está desarrollado en Node.js usando Express y proporciona una API para generar series de Fibonacci y enviarlas por correo electrónico.
+Este proyecto contiene el backend para la aplicación de la prueba técnica. Este backend está desarrollado en Node.js usando Express y proporciona una API para generar series de Fibonacci y enviarlas por correo electrónico,Es importante recordar que solo necesitas correr el backend localmente, ya que el frontend ya está desplegado en la siguiente dirección: https://pruebatecnica-pf.vercel.app." 
 
 ## Requisitos Previos
 

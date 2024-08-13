@@ -1,81 +1,94 @@
-Proyecto Prueba Técnica - Backend
+
+# Proyecto Prueba Técnica - Backend
+
 Este proyecto contiene el backend para la aplicación de la prueba técnica. Este backend está desarrollado en Node.js usando Express y proporciona una API para generar series de Fibonacci y enviarlas por correo electrónico.
 
-Requisitos Previos
+## Requisitos Previos
+
 Antes de ejecutar este proyecto, asegúrate de tener instalado lo siguiente:
 
-Node.js (versión 14 o superior)
-NPM o Yarn como manejador de paquetes
-Instalación
+- [Node.js](https://nodejs.org/) (versión 14 o superior)
+- [NPM](https://www.npmjs.com/) o [Yarn](https://yarnpkg.com/) como manejador de paquetes
+
+## Instalación
+
 Sigue estos pasos para configurar y ejecutar el backend en tu entorno local:
 
-Clona este repositorio:
+1. **Clona este repositorio:**
 
-bash
-Copiar código
-git clone https://github.com/sebasramirez99/PruebaTecnicaBack.git
-Navega al directorio del backend:
+   ```bash
+   git clone https://github.com/sebasramirez99/PruebaTecnicaBack.git
+   ```
 
-bash
-Copiar código
-cd PruebaTecnicaBack/fibonacci-backend
-Instala las dependencias del proyecto:
+2. **Navega al directorio del backend:**
 
-Si usas NPM:
+   ```bash
+   cd PruebaTecnicaBack/fibonacci-backend
+   ```
 
-bash
-Copiar código
-npm install
-Si usas Yarn:
+3. **Instala las dependencias del proyecto:**
 
-bash
-Copiar código
-yarn install
-Ejecución del Servidor
+   Si usas NPM:
+
+   ```bash
+   npm install
+   ```
+
+   Si usas Yarn:
+
+   ```bash
+   yarn install
+   ```
+
+## Ejecución del Servidor
+
 Para iniciar el servidor localmente, usa el siguiente comando:
 
-bash
-Copiar código
+```bash
 node index.js
-El servidor estará escuchando por defecto en el puerto 3001. Puedes acceder a la API en http://localhost:3001.
+```
 
-Endpoints Disponibles
-Generar Serie de Fibonacci
-GET /fibonacci
+El servidor estará escuchando por defecto en el puerto `3001`. Puedes acceder a la API en `http://localhost:3001`.
 
-Parámetros de consulta (query params):
+## Endpoints Disponibles
 
-x: Minutos de la hora actual (por ejemplo, 23)
-n: Segundos de la hora actual (por ejemplo, 45)
-Ejemplo de uso:
+### Generar Serie de Fibonacci
 
-bash
-Copiar código
-http://localhost:3001/fibonacci?x=23&n=45
-Enviar Serie de Fibonacci por Correo
-POST /send-email
+- **GET** `/fibonacci`
 
-Cuerpo de la solicitud (request body):
+  Parámetros de consulta (query params):
+  - `x`: Minutos de la hora actual (por ejemplo, 23)
+  - `n`: Segundos de la hora actual (por ejemplo, 45)
 
-email: Dirección de correo electrónico del destinatario
-time: Hora exacta de generación en formato HH:MM
-fibonacciNumbers: Array con los números de la serie de Fibonacci generados
-Ejemplo de uso:
+  Ejemplo de uso:
 
-json
-Copiar código
-{
-  "email": "destinatario@example.com",
-  "time": "12:23:45",
-  "fibonacciNumbers": [21, 13, 8, 5, 3, 2]
-}
-Documentación de la API
+  ```
+  http://localhost:3001/fibonacci?x=23&n=45
+  ```
+
+### Enviar Serie de Fibonacci por Correo
+
+- **POST** `/send-email`
+
+  Cuerpo de la solicitud (request body):
+
+  ```json
+  {
+    "email": "destinatario@example.com",
+    "time": "12:23:45",
+    "fibonacciNumbers": [21, 13, 8, 5, 3, 2]
+  }
+  ```
+
+## Documentación de la API
+
 La documentación de la API está disponible a través de Swagger. Una vez que el servidor esté en ejecución, puedes acceder a la documentación en:
 
-bash
-Copiar código
+```
 http://localhost:3001/api-docs
-Notas Adicionales
-Asegúrate de configurar correctamente las credenciales de correo en el código antes de enviar correos electrónicos.
-Para que la aplicación frontend funcione correctamente, este backend debe estar en ejecución localmente.
+```
 
+## Notas Adicionales
+
+- Asegúrate de configurar correctamente las credenciales de correo en el código antes de enviar correos electrónicos.
+- Para que la aplicación frontend funcione correctamente, este backend debe estar en ejecución localmente.

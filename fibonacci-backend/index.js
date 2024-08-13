@@ -100,7 +100,7 @@ app.post('/send-email', (req, res) => {
     });
 });
 
-// Inicia el servidor en el puerto 3001 y muestra un mensaje en la consola cuando el servidor esté funcionando.
-app.listen(3001, () => {
-    console.log('Server running on port 3001');
+const PORT = process.env.PORT || 3001;
+app.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
 });

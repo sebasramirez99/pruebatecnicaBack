@@ -100,5 +100,7 @@ app.post('/send-email', (req, res) => {
     });
 });
 
-// Exporta la aplicación para que Vercel pueda manejarla como una función serverless
-module.exports = app;
+const PORT = process.env.PORT || 3001;
+app.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
+});
